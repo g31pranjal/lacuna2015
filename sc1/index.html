@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/nanoscroller.css">
+		<script src="./assets/js/jquery.min.js" ></script>
+        <script src="./assets/js/jquery.nanoscroller.js" ></script>
+		<script src="./assets/js/level2.js" ></script>	
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<div class="cover">
+			<img id="clogo" src="/lacuna/sc1/assets/img/lacuna.png" />
+			<div id="cDesc" class="nano"><div class="content"><span style="text-align:center;font-weight:700;font-size:16px;">The Ishbal Ruins</span><br />
+<br />
+After trekking his way across vast expanses of Hohenheim, Aragon finally made his way to the legendary ruins of Ishbal. He enters the ruins and finds a few doors, most of which are closed. While exploring the open but unknown land, he stumbles onto tabloids. Intriuged by these mystical stones, he decides to unravel its secrets. Will he be able to decipher its meaning? Will he make it past the closed doors to reach the remaining tabloids? Will he be succesful in his endeavour?<br />
+<br />
+Instructions:<br />
+1. Use arrow keys for movement.<br />
+2. Tabloids are hidden clues which pop up in the right when you step on it.<br />
+3. The inner doors are opened after solving the outer clues.</div></div>
+			<div id="moveIn">Continue...</div>
+		</div>
+
+		<div id="grid"></div>
+		<div id="wrapper"></div>
+		
+		<div id="blackout" onClick="close_lb()"></div>
+		<div id="notification" class="lb">
+			<div id="info"></div>
+			<div id="ok_btn" onClick="close_lb()">OK</div>
+		</div>
+		<div id="closeGame_lb" class="lb">
+			<div id="cg_info">You could not complete the journey !..</div>
+			<a href="/lacuna/index.html"><div id="mp_btn">Go to Start Page !</div></a>
+		</div>
+		<div id="clues" class="lb">
+			<div id="clues_data"></div>
+			<div id="clues_ans">
+				<input type="text" id="cl_ans" />
+				<div id="submit_ans">Submit</div>
+			</div>
+		</div>
+
+		<div id="panel">
+			<img id="pLogo" src="assets/img/lacuna.png" />
+			<div id="psName"></div>
+			<div id="infoWrapper">
+				Name : <br>
+				<span class="infoMain" id="userN">Prapta</span><br><br>
+				Score : <br>
+				<span class="infoMain" id="userS">68</span>
+			</div>
+			<div id="solved">
+				Solved Clues : <br>
+				<div class="clStatus" id="cls1"></div>
+				<div class="clStatus" id="cls2"></div>
+				<div class="clStatus" id="cls3"></div>
+				<div class="clStatus" id="cls4"></div>
+				<div class="clStatus" id="cls5"></div>
+				<div class="clStatus" id="cls6"></div>
+				<div class="clStatus" id="cls7"></div>
+			</div>
+			<div id="clueApp">
+				<div id="clue1but" clue="1" class="clueBox">CLUE 1</div>
+				<div id="clue2but" clue="3" class="clueBox">CLUE 2</div>
+				<div id="clue3but" clue="7" class="clueBox">CLUE 3</div>
+				<div id="clue4but" clue="12" class="clueBox">CLUE 4</div>
+				<div id="clue5but" clue="17" class="clueBox">CLUE 5</div>
+				<div id="clue6but" clue="19" class="clueBox">CLUE 6</div>
+				<div id="clue7but" clue="21" class="clueBox">CLUE 7</div>
+			</div>
+			</div>
+		</div>
+
+
+		<script src="./assets/js/main.js" ></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61074199-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

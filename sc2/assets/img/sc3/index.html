@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/nanoscroller.css">
+		<script src="./assets/js/jquery.min.js" ></script>
+         <script src="./assets/js/jquery.nanoscroller.js" ></script>
+		<script src="./assets/js/level2.js" ></script>	
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+	<img src="assets/img/back.jpg" class="backIMG" style="width: 1006px;margin-left:-15px"/>
+
+
+	<div class="cover">
+		<div id="cLogo"></div>
+		<div id="cDesc" class="nano"><div class="content"><span style="text-align:center;font-weight:700;font-size:16px;">Battlefields of Trozei</span><br />
+<br />
+This ancient battlefield has been privy to some of the most horrific wars mankind has everseen. One such batlle fought in 194 AD saw the evil Taher defeated. As a legacy of his evil deeds on earth he has left behind his eye, magically enchanted to haunt the battlefield for eternity. Help Aragon reach the hidden treasures Taher left behind by navigating through the battlefield with the 4 rings collected. Aragon can't come under direct vision of the eye if he wishes to live.<br />
+<br />
+<br />
+Instructions<br />
+1. Use arrow keys for movement.<br />
+2. Each ring carries the power to protect its user from the Taher's eye for a specified number of steps the value of which are mentioned on each ring. For example, if a ring is of number 8, you can use it to move a maximum of 8 steps under protection. The number of uses for each is indicated against each ring. For example, the ring which allows max 8 steps can be used only 2 times.<br />
+3. The character can carry two rings with him at a time. But, he can use only one ring at a time. <br />
+4. The rings can be swapped only when the character is behind the wall. The moment he steps out of a wall without a ring, or he exceeds the limit on the maximum steps, he is destroyed.<br />
+5. Dropping and picking up rings are allowed when behind wall or on the door.<br />
+6. The objective is to get all 4 rings to the door (near top right of map). <br />
+7. There are clues hidden in the map. Step on it and solve the clue.</div></div>
+		<div id="moveIn">Continue...</div>
+	</div>
+
+
+
+	<div id="grid"></div>
+	<div id="wrapper">
+		
+	</div>
+
+	<div id="blackout" onClick="close_lb()">
+		
+	</div>
+	<div id="notification" class="lb">
+		<div id="info"></div>
+		<div id="ok_btn" onClick="close_lb()">OK</div>
+	</div>
+	<div id="closeGame_lb" class="lb">
+		<div id="cg_info">You could not complete the journey !..</div>
+		<div id="try_btn" onClick="location.reload()">Try Again</div>
+	</div>
+	<div id="clues" class="lb">
+		<div id="clues_data"></div>
+		<div id="clues_ans">
+			<input type="text" id="cl_ans" />
+			<div id="submit_ans">Submit</div>
+		</div>
+	</div>
+
+	<div id="panel">
+		<img id="pLogo" src="assets/img/lacuna.png" />
+		<div id="psName"></div>
+		<div id="infoWrapper">
+			Name : <br>
+			<span class="infoMain" id="userN"></span><br><br>
+			Score : <br>
+			<span class="infoMain" id="userS"></span>
+		</div>
+		<div id="solved">
+			Solved Clues : <br>
+			<div class="clStatus" id="cls1"></div>
+			<div class="clStatus" id="cls2"></div>
+		</div>
+		<div id="clueApp">
+			<div id="clue1but" clue="4" class="clueBox">CLUE 1</div>
+			<div id="clue2but" clue="8" class="clueBox">CLUE 2</div>
+		</div>
+
+		<div id="availableRingsWrapper">
+		Available Rings : <br>
+			<div id="aRW1" class="availableRing">
+				<div id="weight"></div>
+				<div id="number"></div>
+			</div>
+			<div id="aRW2" class="availableRing">
+				<div id="weight"></div>
+				<div id="number"></div>
+			</div>
+			<div id="aRW3" class="availableRing">
+				<div id="weight"></div>
+				<div id="number"></div>
+			</div>
+			<div id="aRW4" class="availableRing">
+				<div id="weight"></div>
+				<div id="number"></div>
+			</div>
+		</div>
+		<div id="journeyRingsWrapper">
+		Rings in current journey : <br>
+			<div id="aRW1" class="journeyRing">
+				<div id="weight"></div>
+				<div id="number"></div>
+				<button id="useBut" class="use">Use Ring</button>
+				<button id="completeBut" class="leave">Leave Ring</button>
+			</div>
+			<div id="aRW2" class="journeyRing" recent="1">
+				<div id="weight"></div>
+				<div id="number"></div>
+				<button id="useBut" class="use">Use Ring</button>
+				<button id="completeBut" class="leave">Leave Ring</button>
+			</div>
+		</div>
+		<div id="currentRingWrapper">
+		Moves Left
+			<div id="aRW1">
+				<div id="movesLeft"></div>
+			</div>
+		</div>
+		<div id="completedRingsWrapper">
+		Completed Rings <br>
+			<div id="aRW1" class="availableRing">
+				<div id="weight"></div>
+			</div>
+			<div id="aRW2" class="availableRing">
+				<div id="weight"></div>
+			</div>
+			<div id="aRW3" class="availableRing">
+				<div id="weight"></div>
+			</div>
+			<div id="aRW4" class="availableRing">
+				<div id="weight"></div>
+			</div>
+		</div>
+
+		<div id="clue1but" clue="4" class="clueBox">CLUE 1</div>
+		<br>
+		<div id="clue2but" clue="8" class="clueBox">CLUE 2</div>
+		</div>
+            	</div>
+	<script src="./assets/js/main.js" ></script>
+	</body>
+</html>

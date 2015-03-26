@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<style>
+body{
+	background: url('../img/bg.png');
+	font-family: 'Open Sans', sans-serif;
+	background-size: cover;
+}
+#lakuna_logo{
+	position: relative;
+	width: 200px;
+	margin: auto;
+	
+}
+#lakuna_logo img{
+	width: 100%;
+}
+#leader_board{
+	top: 20px;
+	color: white;
+	position: relative;
+	margin: auto;
+	width: 500px;
+	z-index: 99;
+}
+table{
+	border-spacing: 0px;
+}
+td {
+  border-bottom: 1px solid #1a1a1a;
+  text-align: center;
+  color: #aaa;
+	height: 32px;
+	padding:0px 40px;
+}
+th {
+  text-align: center;
+	height: 40px;
+	font-size: 24px;
+  font-weight: 400;
+  color: #e6e6e6;
+  border-bottom: 1px solid #333;
+}
+
+tr{
+	background: rgba(0,0,0,0.45);
+}
+</style>
+<body>
+<div id="lakuna_logo">
+	<img src="../img/lacuna.png">
+</div>
+<div id="leader_board">
+		
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$.ajax({
+		url: '/2015/lacuna/leaderboard/',
+		dataType:'json',
+		success: function(data){
+			var arr = $.map(data, function(el) { return el; })
+			$('#leader_board').html('<table width="100%"><tr><th width="20%">Rank</th><th width="60%">Name</th><th width="20%">Score</th></tr>');
+			for(i=1;i<arr.length;i++) {
+				$('#leader_board').append('<tr><td>'+i+'</td><td>'+arr[i][0]+'</td><td>'+arr[i][1]+'</td></tr>');
+			
+			}}
+			});
+			
+});
+</script>
+</body>
+</html>

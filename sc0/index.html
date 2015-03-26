@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/nanoscroller.css">
+		<script src="./assets/js/jquery.min.js" ></script>
+        <script src="./assets/js/jquery.nanoscroller.js" ></script>
+		<script src="./assets/js/level2.js" ></script>	
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		<div class="cover">
+			<img id="clogo" src="/lacuna/sc1/assets/img/lacuna.png" />
+			<div id="cDesc"><div class="content"><span style="text-align:center;font-weight:700;font-size:16px;">Hello, Welcome to the land of Hohenheim.</span><br /><br/>
+You are Aragon and you are here to participate in the race/war to win Lacuna, the prize bestowed to the craziest adventurer of the land who manages to explore the land, find its secrets and unshroud its darkness. Hohenheim is characterized by mountains and lakes, tress and animals, monuments and ruins amongst a variety of other things. <br />
+<br />
+The map of Hohenheim is not as direct as it seems. Alter it, navigate it and make your way to the places the land has to show. Getting to them is not easy either as you will find out. <br />
+<br />
+Instructions:<br />
+1. The map of Hohenheim has a total of 27 combinations. There are 3 clues hidden in these 27 combinations. These clues will be made available as you get one of those 3 combinations.<br />
+2. Solve a clue and you unlock access to a corresponding location in Hohenheim. Three clues lead to three locations where more clues are available and so are puzzles.<br />
+3. Click anywhere on the three parts of the map to rotate the corresponding part. Each rotation of a part will lead to a particular combination.</div></div>
+			<div id="moveIn">Continue...</div>
+		</div>
+
+
+		<div id="blackout" onClick="close_lb()">
+		
+		</div>
+		<div id="notification" class="lb">
+			<div id="info"></div>
+			<div id="ok_btn" onClick="close_lb()">OK</div>
+		</div>
+		<div id="closeGame_lb" class="lb">
+			<div id="cg_info">You could not complete the journey !..</div>
+			<div id="try_btn" onClick="location.reload()">Try Again</div>
+		</div>
+		<div id="clues" class="lb">
+			<div id="clues_data"></div>
+			<div id="clues_ans">
+				<input type="text" id="cl_ans" />
+				<div id="submit_ans">Submit</div>
+			</div>
+		</div>
+
+		<div id="panel">
+			<img id="pLogo" src="assets/img/lacuna.png" />
+			<div id="psName"></div>
+			<div id="infoWrapper">
+				Name : <br>
+				<span class="infoMain" id="userN">Prapta</span><br><br>
+				Score : <br>
+				<span class="infoMain" id="userS">68</span>
+			</div>
+			<div id="solved">
+				Solved Clues : <br>
+				<div class="clStatus" id="cls1"></div>
+				<div class="clStatus" id="cls2"></div>
+				<div class="clStatus" id="cls3"></div>
+			</div>
+			<div id="clueApp">
+				<div id="clue1but" clue="5" class="clueBox">CLUE 1</div>
+				<div id="clue2but" clue="9" class="clueBox">CLUE 2</div>
+				<div id="clue3but" clue="11" class="clueBox">CLUE 3</div>
+			</div>
+            </div>
+
+
+		<div id="wrapper">
+			<div id="cir1" class="innerC" cr="0"></div>
+			<div id="cir2" class="innerC" cr="1"></div>
+			<div id="cir3" class="innerC" cr="2"></div>
+			<div id="cir4" class="innerC" cr="3"></div>
+		</div>
+		<script src="./assets/js/main.js" ></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61074199-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
